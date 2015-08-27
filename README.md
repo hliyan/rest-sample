@@ -127,3 +127,27 @@ GET /users/2
   "group": { "uid": "1", "name": "Default" }
 }
 ```
+
+## update user
+
+#### update user request
+
+```
+PUT /users/2
+{
+  "username": "joe",
+  "password": "123456",
+  "group": { "uid": "2"}
+}
+```
+
+#### update user response - success
+
+```
+200 OK
+{
+  "uid": "2",
+  "username": "joe",
+  "group": { "uid": "2", "name": "Administrators" }
+}
+```
