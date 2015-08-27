@@ -1,6 +1,9 @@
 # rest-sample
 A simple, practical (warning: but NOT fully compliant) RESTful API sample.
 
+# headers
+- TODO
+
 ## login
 
 #### request
@@ -14,8 +17,16 @@ POST /login
 
 #### response - success
 ```
-201 OK
+201 Created
 {
   "token": "12345678"
+}
+```
+
+#### response - auth fail
+```
+404 Not Found
+{
+  "message": "The credentials you entered are not recognized"
 }
 ```
