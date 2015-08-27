@@ -171,3 +171,12 @@ DELETE /users/2
 }
 ```
 - delete response sends the last state of the record before it was deleted
+
+# standard error responses
+- TODO
+
+# summary data
+- TODO
+
+# embedded data
+- TODO
