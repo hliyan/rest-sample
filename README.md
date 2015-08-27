@@ -75,3 +75,16 @@ POST /users
 - responses set server generated values and defaults
 - does not send secret fields
 - embeds at a minimum the uid (and usually a name) for foreign key constraints
+
+#### create user response - fail - validations
+
+```
+400 Bad Request
+{
+  "message": "Validation failed",
+  "fields": {
+    "username": "Username should be at least 5 characters in length.",
+    "password": "Password is required."
+  }
+}
+```
