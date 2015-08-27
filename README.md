@@ -151,3 +151,23 @@ PUT /users/2
   "group": { "uid": "2", "name": "Administrators" }
 }
 ```
+
+## delete user
+
+#### delete user request
+
+```
+DELETE /users/2
+```
+
+#### delete user response - success
+
+```
+200 OK
+{
+  "uid": "2",
+  "username": "joe",
+  "group": { "uid": "2", "name": "Administrators" }
+}
+```
+- delete response sends the last state of the record before it was deleted
