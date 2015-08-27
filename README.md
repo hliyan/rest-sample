@@ -67,9 +67,9 @@ POST /users
 ```
 201 OK
 {
-  "uid": "4ac34i",
+  "uid": "2",
   "username": "joe",
-  "group": { "uid": "21", "name": "Default" }
+  "group": { "uid": "1", "name": "Default" }
 }
 ```
 - responses set server generated values and defaults
@@ -106,5 +106,24 @@ GET /users
     { "uid": "1", "username": "john", "group": { "uid": "1", "name": "Default Group" } },
     { "uid": "2", "username": "joe", "group": { "uid": "1", "name": "Default Group" } }
   ]
+}
+```
+
+## get user details
+
+#### user detail request
+
+```
+GET /users/2
+```
+
+#### user detail response
+
+```
+201 OK
+{
+  "uid": "2",
+  "username": "joe",
+  "group": { "uid": "1", "name": "Default" }
 }
 ```
