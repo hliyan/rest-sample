@@ -47,3 +47,31 @@ POST /login
   "message": "The credentials you entered are not recognized"
 }
 ```
+
+# users
+
+## create user
+
+#### create user request
+
+```
+POST /users
+{
+  "username": "joe",
+  "password": "123456"
+}
+```
+
+#### create user response - success
+
+```
+201 OK
+{
+  "uid": "4ac34i",
+  "username": "joe",
+  "group": { "uid": "21", "name": "Default" }
+}
+```
+- responses set server generated values and defaults
+- does not send secret fields
+- embeds at a minimum the uid (and usually a name) for foreign key constraints
