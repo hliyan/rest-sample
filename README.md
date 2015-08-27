@@ -88,3 +88,23 @@ POST /users
   }
 }
 ```
+
+## list users
+
+#### list users request
+
+```
+GET /users
+```
+
+#### list users response
+
+```
+200 OK
+{
+  "data": [
+    { "uid": "1", "username": "john", "group": { "uid": "1", "name": "Default Group" } },
+    { "uid": "2", "username": "joe", "group": { "uid": "1", "name": "Default Group" } }
+  ]
+}
+```
