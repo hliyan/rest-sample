@@ -2,11 +2,28 @@
 A simple, practical (warning: but NOT fully compliant) RESTful API sample.
 
 # headers
-- TODO
+
+## request headers
+
+- all requests (except login) should send auth token
+
+```
+Authorization: token <token received in login response>
+```
+
+## response headers
+
+- all responses should contain JSON
+
+```
+Content-Type: application/json; charset=utf-8
+```
+
+# API
 
 ## login
 
-#### request
+#### login request
 ```
 POST /login
 {
@@ -15,7 +32,7 @@ POST /login
 }
 ```
 
-#### response - success
+#### login response - success
 ```
 201 Created
 {
@@ -23,7 +40,7 @@ POST /login
 }
 ```
 
-#### response - auth fail
+#### login response - auth fail
 ```
 404 Not Found
 {
