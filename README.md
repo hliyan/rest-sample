@@ -173,7 +173,14 @@ DELETE /users/2
 - delete response sends the last state of the record before it was deleted
 
 # standard error responses
-- TODO
+- 200 OK - Request succeeded. Response included
+- 201 Created - Resource created. URL to new resource in Location header
+- 204 No Content - Request succeeded, but no response body
+- 400 Bad Request - Could not parse request
+- 401 Unauthorized - No authentication credentials provided or authentication failed
+- 403 Forbidden - Authenticated user does not have access
+- 404 Not Found - Resource not found
+- 500, 501, 502, 503, etc - An internal server error occured
 
 # summary data
 - TODO
