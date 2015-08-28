@@ -202,6 +202,21 @@ DELETE /users/2
 }
 ```
 
+# conventions
+- routes are always nouns and represent objects
+- verbs should be handled using the http verbs, not endpoint names
+
+# nested resources
+- examples:
+
+```
+/posts
+/posts/1
+/posts/1/comments
+/posts/1/comments/42 # a specific comment
+```
+
+
 # embedded data
 - by default, responses will only contain uid and name of relation fields, e.g.:
 
