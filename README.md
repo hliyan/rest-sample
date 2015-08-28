@@ -203,4 +203,34 @@ DELETE /users/2
 ```
 
 # embedded data
-- TODO
+- by default, responses will only contain uid and name of relation fields, e.g.:
+
+```
+{ 
+  "uid": "1", 
+  "username": "john", 
+  "group": {
+      "uid": "1", 
+      "name": "Default Group" 
+  }
+}
+```
+- you can request a full embed using:
+
+```
+/users/1?embed=group
+``` 
+- this will result in:
+
+```
+{ 
+  "uid": "1", 
+  "username": "john", 
+  "group": {
+      "uid": "1", 
+      "name": "Default Group",
+      "type": "Branch",
+      "manager": { "uid": 2, "username": "joe" }
+  }
+}
+```
