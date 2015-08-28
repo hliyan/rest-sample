@@ -183,7 +183,24 @@ DELETE /users/2
 - 500, 501, 502, 503, etc - An internal server error occured
 
 # summary data
-- TODO
+- by default, responses will contain ALL of a record's fields
+- if you want to limit them (for example, a large list query), you can use the following query parameter:
+ 
+```
+/users?fields=username
+```
+
+- this will send responses of this type (uid is always included):
+
+```
+200 OK
+{
+  "data": [
+    { "uid": "1", "username": "john" },
+    { "uid": "2", "username": "joe" }
+  ]
+}
+```
 
 # embedded data
 - TODO
